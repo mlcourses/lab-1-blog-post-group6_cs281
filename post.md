@@ -11,6 +11,23 @@ This week we'll explore some common hardware components, most notably the PB-503
 The two major materials that we need are the PB-503 breadboard prototyping stations and the Arduino. The PB-503 contains electrical components like switches, LEDs, power supplies, and function generators that surround a circuit prototyping board, called a breadboard. The Arduino is a microcontroller system accompanied by its dedicated IDE. Here, we power up and transfer the control program to the Arduino using a USB cable connected to our laptop. We also introduce two logic gates - the NOT gate and the AND gate, which can be used to perform Boolean logic operation and return a single bit as output. Finally, we have wires with different colors to avoid cluttering during the wiring process.
 ## Project Steps ##Utsav
 
+    We started off this lab by obtaining PB-503 breadboard prototyping stations and the Arduino kit. As we plugged in our board as switched the power supply button on, the power supply button light light up which meant our board is in good condition and is ready to use. 
+
+    Now, we learned that we needed to supply power from the PB-503 into the breadboard which was connected and was in the middle of the PB-503 breadboard. We learned that we will only be using +5 Volts as our power supply. Not just for this lab, but for the whole semester so we learned that we don't need to hook a wire to any other power voltages. To send power into our breadboard (in the middle), we connected +5volts in the brown wire row, and 0volts (GND) in the green wire row. The +5 volts of power was pulled in the breadboard from Red, and the GND was brought to the breadboard from Black power supply of the PB-503 station. Now, we had +5volts and 0volts running in our breadboard. We know this is true because we noticed a pattern of +5volts (brown wire) and 0volts (green wire) connecting all around the board except the column of 5 holes, which were not connected to any power supply. The holes with 5 columns seemed to be connected across the rows underneath the breadboard but at the moment, they had no power. 
+
+    We tested the power output of different locations in breadboard by connecting a wire, one end of the wire to the testing hole in breadboard and other in the Logic Indicators. If there was +5volts, the red light lit up and if there was 0volts then the green light lit up in the Logic Indicators. We also noticed that the floating pins (holes with 5 columns) was nither high or low. This makes sense since at the moment, we hadn't connected anything to the floating pin, meaning we had no power brought to the floating pins. 
+
+    After understanding the basics of how the breadboard is connected and how the power (+5 volts and 0 volts) were supplied throughout the breadboard (using brown and green wires), we moved towards building our first LED light circuit. To light the LED bulb, we connected the long side of the LED bulb to +5 volts and the short side to GND. We learned that the long and short side matters since current only flows in one direction through an LED. After this, we also connected a resistor inbetween pulling the power from +5volts (brown wire row) which made sure LED was recieving the volts needed. 
+
+
+    Next, we substituted the function generator for the +5 volts input into our LED circuit. The function generator helped us control the Hz, Frequency and other minor things which was not controlled earlier when we directly plugged power from +5 volts (Brown wire row). After connecting with the function generator, we set the switch to square wave. We also set the top switch to "1". We changed the other top switch to Hz from KHz. We set the right slider to the top setting as well since we wanted the max voltage. The slider change meant we were accessing different fractions of our max voltage of +5 volts. After successfully connecting our LED circuit with function generator, our LED light up. We also noticed that 1Hz slowed down the blinking frequency. Setting it to 10Hz made the light blink faster than ever before. We learned that AMP was the power in Volts.
+
+
+    Next, we built an Inverter Gate with a 7404 (Inv or Not) chip. We learned how fragile these IC chips could be so we worked with them with the utmost care. As we connected the Inv. IC chip, we supplied it power through the Vcc (top right), and GND (bottom left). The 7404 Inv datasheet was very helpful in learning how this was supposed to be used. From the datasheet, we learned that the A/Y pins were used as Inputs and Outputs. 
+
+
+
+
 ## Testing ##Vuong
 
 ## Conclusion ##Long's
