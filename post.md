@@ -1,8 +1,6 @@
-# Lab X: Doing stuff with hardware!
+# Lab 1: Doing stuff with hardware!
 
-Please write a blog post describing your lab here.
-
-This is just an example of how you might structure your blog post, feel free to edit as you wish. For example, you might divide the lab into different sections each with their own intro, instructions, results, and takeaways. Please see the rubric for details on how the post will be evaluated.
+Group 6: Long Pham, Vuong Nguyen, Utsav Sapkota
 
 ## Overview and Motivation
 This week we'll explore some common hardware components, most notably the PB-503 breadboard prototyping stations and the Arduino - a microcontroller system for embedded processor control, as well as other circuit components like LEDs, resistors, and logic gates. After this lab, we will gain crucial knowledge about what these components are, where they are set up in relation to each other, and how we do so to make the circuit work properly. Understanding these points will allow us to move on with other components in future labs. 5 demos with images and videos will be provided below to support better understanding of the material. 
@@ -32,7 +30,7 @@ Now, we learned that we needed to supply power from the PB-503 into the breadboa
 
 We tested the power output of different locations in breadboard by connecting a wire, one end of the wire to the testing hole in breadboard and other in the Logic Indicators. If there was +5volts, the red light lit up and if there was 0volts then the green light lit up in the Logic Indicators. We also noticed that the floating pins (holes with 5 columns) was nither high or low. This makes sense since at the moment, we hadn't connected anything to the floating pin, meaning we had no power brought to the floating pins. 
 
-After understanding the basics of how the breadboard is connected and how the power (+5 volts and 0 volts) were supplied throughout the breadboard (using brown and green wires), we moved towards building our first LED light circuit. To light the LED bulb, we connected the long side of the LED bulb to +5 volts and the short side to GND. We learned that the long and short side matters since current only flows in one direction through an LED. After this, we also connected a resistor inbetween pulling the power from +5volts (brown wire row) which made sure LED was recieving the volts needed. 
+After understanding the basics of how the breadboard is connected and how the power (+5 volts and 0 volts) were supplied throughout the breadboard (using brown and green wires), we moved towards building our first LED light circuit. To light the LED bulb, we connected the long side of the LED bulb to +5 volts and the short side to GND. We learned that the long and short side matters since current only flows in one direction through an LED. After this, we also connected a resistor inbetween pulling the power from +5volts (brown wire row) which made sure LED was receiving the volts needed. 
 
 
 Next, we substituted the function generator for the +5 volts input into our LED circuit. The function generator helped us control the Hz, Frequency and other minor things which was not controlled earlier when we directly plugged power from +5 volts (Brown wire row). After connecting with the function generator, we set the switch to square wave. We also set the top switch to "1". We changed the other top switch to Hz from KHz. We set the right slider to the top setting as well since we wanted the max voltage. The slider change meant we were accessing different fractions of our max voltage of +5 volts. After successfully connecting our LED circuit with function generator, our LED light up. We also noticed that 1Hz slowed down the blinking frequency. Setting it to 10Hz made the light blink faster than ever before. We learned that AMP was the power in Volts.
@@ -72,8 +70,4 @@ Not just this, when we changed the value of A and B to 500, the LED blink faster
 ## Testing ##Vuong
 
 ## Conclusion ##Long's
-
-
-
-
-
+This lab introduced us to essential computer hardware components, covering breadboards, Arduino, IC chips, and more. Hands-on activities provided a foundational understanding of how these components work together in a computer system and how we can use this background in future labs.
