@@ -145,7 +145,7 @@ In this program, we can see that variable P refers to the number of the pin that
 
 Now, take a look at the S2. Since we are using the AND gate, when we switch the S2 to off, the LED will turn green even though the Arduino is plugged. This means no power is running through the LED. When we change the value of A and B to 2 smaller numbers, the LED blinks faster. The value of P can only be changed if we change the pin connecting Arduino to the circuit. 
 
-## Conclusion ##Long's
+## Conclusion
 
 This lab introduced us to essential computer hardware components, covering breadboards, Arduino, IC chips, and more. Hands-on activities provided a foundational understanding of how these components work together in a computer system and how we can use this background in future labs.
 
