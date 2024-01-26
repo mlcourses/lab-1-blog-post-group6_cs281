@@ -8,17 +8,17 @@ This week we'll explore some common hardware components, most notably the PB-503
 ## Materials
 The two major materials that we need are the PB-503 breadboard prototyping stations and the Arduino. The PB-503 contains electrical components like switches, LEDs, power supplies, and function generators that surround a circuit prototyping board, called a breadboard. 
 
-<img src="PB503.jpg" alt="PB503" title="PB503" width="350" height="300" /> 
+<img src="images/PB503.jpg" alt="PB503" title="PB503" width="350" height="300" /> 
 
 The Arduino is a microcontroller system accompanied by its dedicated IDE. Here, we power up and transfer the control program to the Arduino using a USB cable connected to our laptop.
 
-<img src="Arduino.jpg" alt="Arduino" title="Arduino" width="350" height="300" /> 
+<img src="images/Arduino.jpg" alt="Arduino" title="Arduino" width="350" height="300" /> 
 
 
  We also introduce two logic gates - the NOT gate and the AND gate, which can be used to perform Boolean logic operation and return a single bit as output. 
 
  
- <img src="LogicGates.jpg" alt="LogicGates" title="LogicGates" width="350" height="300" />
+ <img src="images/LogicGates.jpg" alt="LogicGates" title="LogicGates" width="350" height="300" />
  
 
  Finally, we have wires with different colors to avoid cluttering during the wiring process.
