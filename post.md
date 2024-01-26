@@ -29,6 +29,29 @@ The two major materials that we need are the PB-503 breadboard prototyping stati
     Our next task was to test the 7408 IC (and gate). This chip was almost similar to the 7404 IC (Not gate) but instead of just one input, it had two inputs and a output. Of course there were multiple instances of these two inputs and output in the chip which meant we could use 1 7408 chip as multiple and gates. (It had upto 4A/B and 4Ys) This meant the chip provided four independent AND gates. To use this, we supplied +5 volts (top right) and 0volts/GND (bottom left). Next, we wired the first input pin of the AND gate to the first switch, S1 and the second input pin in the second switch, S2. After making sure power is supplied, we noticed that these inputs could be changed from the Switch Panel. By hand toggling through all four conbinations of High and Low, we noticed that it corresponds and functions like the truth table of And Gate. 
 
 
+    Last part of the lab was the use Arduino- an embedded controller - to improve our AND gate and we implemented the following code into Arduino.
+
+    "
+    Const int P = 13;
+    Const int A = 1000;
+    Const int B = 1000;
+
+    void setup(){
+        pinMode(p, OUTPUT);
+
+    }
+    void loop(){
+        digitalWrite(P, HIGH);
+        delay(A);
+        digitalWrite(P, LOW);
+        delay(B);
+    }
+
+    "
+
+    We implemented this code to control s1 (looping it to be 0, 1) while manually controlling s2 to see the results (And Gate Truth Table). It worked as intended since s1 = 0 and s2 = 0 was 0, s1 = 0, s2 = 1 was also 0, s1 = 1 and s2 = 0 was also 0 and at last, s1 and s2 as 1 gave a result of 1.
+
+    Not just this, when we changed the value of A and B to 500, the LED blink faster, and when we set it to 2000, it was blinking slower. This was the milisecond time that we changed. The value of P can also be changed but the wire (input) going into pin11 should also be changed to what the value of P is. During our experiment, we changed the P to 13, and connected the input wire to pin 13, which still perfectly worked.
 
 
 ## Testing ##Vuong
