@@ -22,7 +22,7 @@ The Arduino is a microcontroller system accompanied by its dedicated IDE. Here, 
  
 
  Finally, we have wires with different colors to avoid cluttering during the wiring process.
-## Project Steps ##Utsav
+## Project Steps 
 
 We started off this lab by obtaining PB-503 breadboard prototyping stations and the Arduino kit. As we plugged in our board as switched the power supply button on, the power supply button light light up which meant our board is in good condition and is ready to use. 
 
@@ -30,21 +30,16 @@ Now, we learned that we needed to supply power from the PB-503 into the breadboa
 
 We tested the power output of different locations in breadboard by connecting a wire, one end of the wire to the testing hole in breadboard and other in the Logic Indicators. If there was +5volts, the red light lit up and if there was 0volts then the green light lit up in the Logic Indicators. We also noticed that the floating pins (holes with 5 columns) was nither high or low. This makes sense since at the moment, we hadn't connected anything to the floating pin, meaning we had no power brought to the floating pins. 
 
-After understanding the basics of how the breadboard is connected and how the power (+5 volts and 0 volts) were supplied throughout the breadboard (using brown and green wires), we moved towards building our first LED light circuit. To light the LED bulb, we connected the long side of the LED bulb to +5 volts and the short side to GND. We learned that the long and short side matters since current only flows in one direction through an LED. After this, we also connected a resistor inbetween pulling the power from +5volts (brown wire row) which made sure LED was receiving the volts needed. 
+After understanding the basics of how the breadboard is connected and how the power (+5 volts and 0 volts) were supplied throughout the breadboard (using brown and green wires), we moved towards **building our first LED light circuit**. To light the LED bulb, we connected the long side of the LED bulb to +5 volts and the short side to GND. We learned that the long and short side matters since current only flows in one direction through an LED. After this, we also connected a resistor inbetween pulling the power from +5volts (brown wire row) which made sure LED was receiving the volts needed. 
 
+We conitnued to change our LED circuit a little. We will **add the Functions Generator into our circuit to make the behavior of the LED light more interesting**. We substituted the function generator for the +5 volts input into our LED circuit. The function generator helped us control the Hz, Frequency and other minor things which was not controlled earlier when we directly plugged power from +5 volts (Brown wire row). After connecting with the function generator, we set the switch to square wave. We also set the top switch to "1". We changed the other top switch to Hz from KHz. We set the right slider to the top setting as well since we wanted the max voltage. The slider change meant we were accessing different fractions of our max voltage of +5 volts. After successfully connecting our LED circuit with function generator, our LED light up. We also noticed that 1Hz slowed down the blinking frequency. Setting it to 10Hz made the light blink faster than ever before. We learned that AMP was the power in Volts. Hence, AMP slider adjusts the brightness of the LED.
 
-Next, we substituted the function generator for the +5 volts input into our LED circuit. The function generator helped us control the Hz, Frequency and other minor things which was not controlled earlier when we directly plugged power from +5 volts (Brown wire row). After connecting with the function generator, we set the switch to square wave. We also set the top switch to "1". We changed the other top switch to Hz from KHz. We set the right slider to the top setting as well since we wanted the max voltage. The slider change meant we were accessing different fractions of our max voltage of +5 volts. After successfully connecting our LED circuit with function generator, our LED light up. We also noticed that 1Hz slowed down the blinking frequency. Setting it to 10Hz made the light blink faster than ever before. We learned that AMP was the power in Volts.
+We moved onto the second circuit. We built an Inverter Gate with a 7404 (Inv or Not) chip. We learned how fragile these IC chips could be so we worked with them with the utmost care. As we connected the Inverter IC chip, we supplied it power through the Vcc (top right), and GND (bottom left). The 7404 Inv datasheet is very helpful in learning how this was supposed to be used. From the datasheet, we learned that the A/Y pins were used as Inputs and Outputs. We connected our input (first row of left hole) and output as (second row of left hole) in the logic indicators. The input (A pin, 1A) came from the function generator. This input was also connected to logic probe LED which was for use to check if it was working as intended. After this, we wired the output to another logic probe. After testing, we noticed that the logic probe was lighting up high or low depending on the signal connected to it.
 
-
-Next, we built an Inverter Gate with a 7404 (Inv or Not) chip. We learned how fragile these IC chips could be so we worked with them with the utmost care. As we connected the Inv. IC chip, we supplied it power through the Vcc (top right), and GND (bottom left). The 7404 Inv datasheet was very helpful in learning how this was supposed to be used. From the datasheet, we learned that the A/Y pins were used as Inputs and Outputs. We connected our input (first row of left hole) and output as (second row of left hole) in the logic indicators. The input (A pin, 1A) came from the function generator. This input was also connected to logic probe LED which was for use to check if it was working as intended. After this, we wired the output to another logic probe. After testing, we noticed that the logic probe was lighting up high or low depending on the signal connected to it.
-
-
-Our next task was to test the 7408 IC (and gate). This chip was almost similar to the 7404 IC (Not gate) but instead of just one input, it had two inputs and a output. Of course there were multiple instances of these two inputs and output in the chip which meant we could use 1 7408 chip as multiple and gates. (It had upto 4A/B and 4Ys) This meant the chip provided four independent AND gates. To use this, we supplied +5 volts (top right) and 0volts/GND (bottom left). Next, we wired the first input pin of the AND gate to the first switch, S1 and the second input pin in the second switch, S2. After making sure power is supplied, we noticed that these inputs could be changed from the Switch Panel. By hand toggling through all four conbinations of High and Low, we noticed that it corresponds and functions like the truth table of And Gate. 
-
+Now, we moved on to build a citcuit with AND gate. This chip was almost similar to the 7404 IC (NOT gate) but instead of just one input, it has two inputs and a output. Of course there were multiple instances of these two inputs and output in the chip which meant we could use 1 7408 chip as multiple AND gates. (It had upto 4A/B and 4Ys) This meant the chip provided four independent AND gates. To use this, we supplied +5 volts (top right) and 0volts/GND (bottom left). Next, we wired the first input pin of the AND gate to the first switch, S1 and the second input pin in the second switch, S2. After making sure power is supplied, we noticed that these inputs could be changed from the Switch Panel. By hand toggling through all four conbinations of High and Low, we noticed that it corresponds and functions like the truth table of AND Gate. 
 
 Last part of the lab was the use Arduino- an embedded controller - to improve our AND gate and we implemented the following code into Arduino.
-
-"
+```
 Const int P = 13;
 Const int A = 1000;
 Const int B = 1000;
@@ -59,15 +54,14 @@ void loop(){
     digitalWrite(P, LOW);
     delay(B);
 }
+```
 
-"
-
-We implemented this code to control s1 (looping it to be 0, 1) while manually controlling s2 to see the results (And Gate Truth Table). It worked as intended since s1 = 0 and s2 = 0 was 0, s1 = 0, s2 = 1 was also 0, s1 = 1 and s2 = 0 was also 0 and at last, s1 and s2 as 1 gave a result of 1.
+We implemented this code to control S1 (looping it to be 0, 1) while manually controlling s2 to see the results (AND Gate Truth Table). It worked as intended since S1 = 0 and S2 = 0 was 0, S1 = 0, S2 = 1 was also 0, S1 = 1 and S2 = 0 was also 0 and at last, S1 and S2 as 1 gave a result of 1.
 
 Not just this, when we changed the value of A and B to 500, the LED blink faster, and when we set it to 2000, it was blinking slower. This was the milisecond time that we changed. The value of P can also be changed but the wire (input) going into pin11 should also be changed to what the value of P is. During our experiment, we changed the P to 13, and connected the input wire to pin 13, which still perfectly worked.
 
 
-## Testing ##Vuong
+## Testing 
 Since we have 5 circuits in our lab, this section will show we test each circuit to see if they work or not. 
 ### Breadboards
 #### 1. Testing HIGH and LOW voltage locations:
@@ -80,7 +74,7 @@ In the first circuit, we will lgiht a LED with a 330 Ohm resistor. To test if we
 3. The other end of hte resistor is connected to +5V hole. (This mean the long end of the LED is connected to the +5V power hole).
 Then, we test if the logic works. Turn on the breadboard. If the LED lights up, it means there is a +5V power supply runs though the circuit that lights up the LED. Else, there might be no power supplied, you might want to go back to the wiring check. 
 
-[First circuit](images/first_circuit.png)
+<img src="images/first_circuit.png" alt="First circuit" title="First circuit" width="350" height="300" />
 
 #### Function generator
 Now, we will learn how to control the power (in this lab we use +5V) that is directed into the circuit. **First, we turn off the breadboard**. Then, follow the instructions to switch to Functions generator.
@@ -94,13 +88,13 @@ Now, we will learn how to control the power (in this lab we use +5V) that is dir
 
 After finish the wiring, your circuit should look like the one below. 
 
-[Function generator circuit](images/function_generator.png)
+<img src="images/function_generator.png" alt="Function generator circuit" title="Function generator circuit" width="350" height="300" />
 
 Now, when we turn on the breadboard, we will see that our LED blinks on and off. Now try to see what the AMP and the FREQ sliders do to our LED. Hz on the switch board above the represents the frequency in which the current changes direction per second. This makes the LED blinks on and off. Hence, 1 Hz means the frequency of direction changes per second is 1Hz (meaning 1 cycle per second). 10 Hz means the frequency of the direction changes per second is 10 Hz. Therefore, when we change FREQ slider, moving it closer to 0.1, the LED blinks slower. 
 
 When we change the AMP slider, we will see the light on our LED gradually dims. As we adjust the AMP slider and the FREQ slider, we will observe "phase transitions" in the behavior of LED. This refers to the flickering of the LED. 
 
-[Video shows how we change the frequency and the brightness of the ](images/function_generator.MOV)
+<img src="images/function_generator.MOV" alt="Video shows how we change the frequency and the brightness of the LED" title="Video shows how we change the frequency and the brightness of the LED" width="350" height="300" />
 
 #### Logic gate: inverter:
 In this section, we will learn how to use the inverter 7404 IC in our circuit.First, let's turn off the breadboard before we build another circuit. Now, find the 7404 IC. The upper right hand corner of the IC is to be connected to VCC (which is +5V power supply source). The lower left corner is to be connected to Ground (labeled as GND). The notch of the inverter indicates the "top" of the IC. 
@@ -112,6 +106,7 @@ Each IC will have 6 inverters. The input pins are marked as A (1A, 2A, ect.,). T
 4. Now, connect Vcc and GND to +5V hole and 0V hole as usual. 
 
 When we provide a +5V power supply through the circuit, we will see that the the LED on the Logic probe 1 lights up. This means there is power run thtough the circuit and the LED. Now, since this is an inverter IC, when the logic probe 1's LED is on, the Logic Probe 2 LED, the one that is connected to the output of the inverter will lights up GREEN. This means the power running thorugh the LED is at 0V. Now, we see the logic when using this inverter. Whenever the input power is HIGH (which also means 1), the output observed at the logic probe 2 is LOW (also means 0). When we change the input power on hte Function Generator board, the LED on the logic probe alternatively. This circuit helps we see how the inverter works.
+<img src="images/inverter_circuit.png" alt="Circuit with inverter gate" title="Circuit with inverter gate" width="350" height="300" />
 
 #### Logic gate: AND gate
 The 7408 chip provides 4 independent AND gates. Each gate has 2 inputs pins and 1 output pin. In this section, we build a circuit with the AND gate. 
@@ -126,6 +121,7 @@ In this section, we learn how to use Arduino controller to operate the circuit i
 2. Wire the S2 to the second input pin. 
 3. Wire both GND and Vcc to Ground and +5V holes, respectively. 
 4. The output of the AND gate will be wired logic probe. 
+<img src="images/connecting_arduino.png" alt="Connecting Arduino to the circuit" title="Connecting Arduino to the circuit" width="350" height="300" />
 
 Now, we will follow the program to operate the circuit. 
 ```
@@ -142,7 +138,7 @@ void loop() {
     delay(B); 
 }
 ```
-
+<img src="images/arduino_program.png" alt="Arduino program" title="Arduino program" width="350" height="300" />
 
 In this program, we can see that variable P refers to the number of the pin that the program operate on. In this case, since we wire the circuit with Arduino via the pin 13, P=13. A and B represent some unit of time in which we want the program to operate on hte circuit. The function ```loop``` developed to operate the circuit. With the switch S2 set to HIGH,```digitalWrite(P, HIGH)``` tells the circuit to input a power supply at HIGH (+5V) through the circuit. This makes the LED light up RED. Then ```delay(A)``` is called. This tells the circuit to stay still for some A (=1000) units of time after continue to run the next function. Then ```digitalWrite(P, LOW)``` provides the LOW power (0V) to the circuit, making the LED green up. Similarly,```delay(B)``` is called tells the circuit to stop for some B units of time before running the next function. This program makes the LED lights on and off alternately. 
 
