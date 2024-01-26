@@ -94,7 +94,8 @@ Now, when we turn on the breadboard, we will see that our LED blinks on and off.
 
 When we change the AMP slider, we will see the light on our LED gradually dims. As we adjust the AMP slider and the FREQ slider, we will observe "phase transitions" in the behavior of LED. This refers to the flickering of the LED. 
 
-<img src="images/function_generator.MOV" alt="Video shows how we change the frequency and the brightness of the LED" title="Video shows how we change the frequency and the brightness of the LED" width="350" height="300" />
+[Video shows the changing in brightness of LED](https://www.youtube.com/shorts/iH4BwUF_pzY)
+
 
 #### Logic gate: inverter:
 In this section, we will learn how to use the inverter 7404 IC in our circuit.First, let's turn off the breadboard before we build another circuit. Now, find the 7404 IC. The upper right hand corner of the IC is to be connected to VCC (which is +5V power supply source). The lower left corner is to be connected to Ground (labeled as GND). The notch of the inverter indicates the "top" of the IC. 
