@@ -97,7 +97,7 @@ When we change the AMP slider, we will see the light on our LED gradually dims. 
 [Video shows the changing in brightness of LED](https://www.youtube.com/shorts/iH4BwUF_pzY)
 
 
-#### Logic gate: inverter:
+#### Logic gate: inverter
 In this section, we will learn how to use the inverter 7404 IC in our circuit.First, let's turn off the breadboard before we build another circuit. Now, find the 7404 IC. The upper right hand corner of the IC is to be connected to VCC (which is +5V power supply source). The lower left corner is to be connected to Ground (labeled as GND). The notch of the inverter indicates the "top" of the IC. 
 
 Each IC will have 6 inverters. The input pins are marked as A (1A, 2A, ect.,). The output pins are marked as Y (1Y, 2Y, etc.,). Now we will build a circuit with our inverter. 
@@ -107,6 +107,7 @@ Each IC will have 6 inverters. The input pins are marked as A (1A, 2A, ect.,). T
 4. Now, connect Vcc and GND to +5V hole and 0V hole as usual. 
 
 When we provide a +5V power supply through the circuit, we will see that the the LED on the Logic probe 1 lights up. This means there is power run thtough the circuit and the LED. Now, since this is an inverter IC, when the logic probe 1's LED is on, the Logic Probe 2 LED, the one that is connected to the output of the inverter will lights up GREEN. This means the power running thorugh the LED is at 0V. Now, we see the logic when using this inverter. Whenever the input power is HIGH (which also means 1), the output observed at the logic probe 2 is LOW (also means 0). When we change the input power on hte Function Generator board, the LED on the logic probe alternatively. This circuit helps we see how the inverter works.
+
 <img src="images/inverter_circuit.png" alt="Circuit with inverter gate" title="Circuit with inverter gate" width="350" height="300" />
 
 #### Logic gate: AND gate
