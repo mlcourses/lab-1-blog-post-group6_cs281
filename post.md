@@ -68,13 +68,13 @@ Since we have 5 circuits in our lab, this section will show we test each circuit
 As we get to know the basic structure breadboards, there are +5 Volts and 0 Volts locations on the breadboards.  In order to test whcih locations are HIGH and LOW, we use the ste of onboard Logic Indicators on the breadboard. Use 1 wire and connect one end to on the Logic Indicators. Connect the other end to the hole on the breadboard that you want to check if it is HIGH or LOW. If the LED lights up RED, the hole is a +5 Volts hole. Otherwise, the LED will light up GREEN meaning that hole is a Ground hole. 
 
 ### Testing the first circuit:
-In the first circuit, we will lgiht a LED with a 330 Ohm resistor. To test if we correctly wire the circuit. First, to check if our circuit is correct, before turning on the power, we will do wiring check. 
+In the first circuit, we will light a LED with a 330 Ohm resistor. To test if we correctly wire the circuit. First, to check if our circuit is correct, before turning on the power, we will do wiring check. 
 1. Short side of the LED must be connected to 0V hole (or Ground hole).
 2. One end of the resisitor is connected to the **long end** of the LED.
 3. The other end of hte resistor is connected to +5V hole. (This mean the long end of the LED is connected to the +5V power hole).
 Then, we test if the logic works. Turn on the breadboard. If the LED lights up, it means there is a +5V power supply runs though the circuit that lights up the LED. Else, there might be no power supplied, you might want to go back to the wiring check. 
 
-<img src="images/first_circuit.jpg" alt="First circuit" title="First circuit" width="350" height="300" />
+![First circuit](https://drive.google.com/file/d/125omqCzj0A8ZqIJAOrT1mvoiqVdbeBFR/view)
 
 #### Function generator
 Now, we will learn how to control the power (in this lab we use +5V) that is directed into the circuit. **First, we turn off the breadboard**. Then, follow the instructions to switch to Functions generator.
@@ -89,6 +89,8 @@ Now, we will learn how to control the power (in this lab we use +5V) that is dir
 After finish the wiring, your circuit should look like the one below. 
 
 <img src="images/function_generator.jpg" alt="Function generator circuit" title="Function generator circuit" width="350" height="300" />
+
+![Function generator](https://drive.google.com/file/d/1DcgIB4-4X2fY28Wv1PRRag3uFoaa_9tN/view)
 
 Now, when we turn on the breadboard, we will see that our LED blinks on and off. Now try to see what the AMP and the FREQ sliders do to our LED. Hz on the switch board above the represents the frequency in which the current changes direction per second. This makes the LED blinks on and off. Hence, 1 Hz means the frequency of direction changes per second is 1Hz (meaning 1 cycle per second). 10 Hz means the frequency of the direction changes per second is 10 Hz. Therefore, when we change FREQ slider, moving it closer to 0.1, the LED blinks slower. 
 
@@ -108,7 +110,7 @@ Each IC will have 6 inverters. The input pins are marked as A (1A, 2A, ect.,). T
 
 When we provide a +5V power supply through the circuit, we will see that the the LED on the Logic probe 1 lights up. This means there is power run thtough the circuit and the LED. Now, since this is an inverter IC, when the logic probe 1's LED is on, the Logic Probe 2 LED, the one that is connected to the output of the inverter will lights up GREEN. This means the power running thorugh the LED is at 0V. Now, we see the logic when using this inverter. Whenever the input power is HIGH (which also means 1), the output observed at the logic probe 2 is LOW (also means 0). When we change the input power on hte Function Generator board, the LED on the logic probe alternatively. This circuit helps we see how the inverter works.
 
-<img src="images/inverter_circuit.jpg" alt="Circuit with inverter gate" title="Circuit with inverter gate" width="350" height="300" />
+[Circuit with inverter gate](https://drive.google.com/file/d/1hgqqtnTt2cKdJXsgBoLntzOYMCUAosDY/view)
 
 #### Logic gate: AND gate
 The 7408 chip provides 4 independent AND gates. Each gate has 2 inputs pins and 1 output pin. In this section, we build a circuit with the AND gate. 
@@ -124,6 +126,8 @@ In this section, we learn how to use Arduino controller to operate the circuit i
 3. Wire both GND and Vcc to Ground and +5V holes, respectively. 
 4. The output of the AND gate will be wired logic probe. 
 <img src="images/connecting_arduino.jpg" alt="Connecting Arduino to the circuit" title="Connecting Arduino to the circuit" width="350" height="300" />
+
+[Connecting Arduino to the circuit](https://drive.google.com/file/d/1WuIVBAnY8hIiU71c3gqOzUN69KwwkTGf/view)
 
 Now, we will follow the program to operate the circuit. 
 ```
@@ -141,6 +145,8 @@ void loop() {
 }
 ```
 <img src="images/arduino_program.jpg" alt="Arduino program" title="Arduino program" width="350" height="300" />
+
+[Arduino program](https://drive.google.com/file/d/1Fu5tNwW0XBNYwG7SRqyt6hoSWxfXtKmy/view)
 
 In this program, we can see that variable P refers to the number of the pin that the program operate on. In this case, since we wire the circuit with Arduino via the pin 13, P=13. A and B represent some unit of time in which we want the program to operate on hte circuit. The function ```loop``` developed to operate the circuit. With the switch S2 set to HIGH,```digitalWrite(P, HIGH)``` tells the circuit to input a power supply at HIGH (+5V) through the circuit. This makes the LED light up RED. Then ```delay(A)``` is called. This tells the circuit to stay still for some A (=1000) units of time after continue to run the next function. Then ```digitalWrite(P, LOW)``` provides the LOW power (0V) to the circuit, making the LED green up. Similarly,```delay(B)``` is called tells the circuit to stop for some B units of time before running the next function. This program makes the LED lights on and off alternately. 
 
