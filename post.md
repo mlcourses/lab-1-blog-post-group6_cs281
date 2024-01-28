@@ -88,8 +88,6 @@ Now, we will learn how to control the power (in this lab we use +5V) that is dir
 
 After finish the wiring, your circuit should look like the one below. 
 
-<img src="images/function_generator.jpg" alt="Function generator circuit" title="Function generator circuit" width="350" height="300" />
-
 [Function generator](https://drive.google.com/file/d/1DcgIB4-4X2fY28Wv1PRRag3uFoaa_9tN/view)
 
 Now, when we turn on the breadboard, we will see that our LED blinks on and off. Now try to see what the AMP and the FREQ sliders do to our LED. Hz on the switch board above the represents the frequency in which the current changes direction per second. This makes the LED blinks on and off. Hence, 1 Hz means the frequency of direction changes per second is 1Hz (meaning 1 cycle per second). 10 Hz means the frequency of the direction changes per second is 10 Hz. Therefore, when we change FREQ slider, moving it closer to 0.1, the LED blinks slower. 
@@ -125,7 +123,6 @@ In this section, we learn how to use Arduino controller to operate the circuit i
 2. Wire the S2 to the second input pin. 
 3. Wire both GND and Vcc to Ground and +5V holes, respectively. 
 4. The output of the AND gate will be wired logic probe. 
-<img src="images/connecting_arduino.jpg" alt="Connecting Arduino to the circuit" title="Connecting Arduino to the circuit" width="350" height="300" />
 
 [Connecting Arduino to the circuit](https://drive.google.com/file/d/1WuIVBAnY8hIiU71c3gqOzUN69KwwkTGf/view)
 
@@ -144,7 +141,6 @@ void loop() {
     delay(B); 
 }
 ```
-<img src="images/arduino_program.jpg" alt="Arduino program" title="Arduino program" width="350" height="300" />
 
 [Arduino program](https://drive.google.com/file/d/1Fu5tNwW0XBNYwG7SRqyt6hoSWxfXtKmy/view)
 
