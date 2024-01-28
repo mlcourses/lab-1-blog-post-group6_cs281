@@ -74,7 +74,7 @@ In the first circuit, we will light a LED with a 330 Ohm resistor. To test if we
 3. The other end of hte resistor is connected to +5V hole. (This mean the long end of the LED is connected to the +5V power hole).
 Then, we test if the logic works. Turn on the breadboard. If the LED lights up, it means there is a +5V power supply runs though the circuit that lights up the LED. Else, there might be no power supplied, you might want to go back to the wiring check. 
 
-![First circuit](https://drive.google.com/file/d/125omqCzj0A8ZqIJAOrT1mvoiqVdbeBFR/view)
+[First circuit](https://drive.google.com/file/d/125omqCzj0A8ZqIJAOrT1mvoiqVdbeBFR/view)
 
 #### Function generator
 Now, we will learn how to control the power (in this lab we use +5V) that is directed into the circuit. **First, we turn off the breadboard**. Then, follow the instructions to switch to Functions generator.
@@ -90,7 +90,7 @@ After finish the wiring, your circuit should look like the one below.
 
 <img src="images/function_generator.jpg" alt="Function generator circuit" title="Function generator circuit" width="350" height="300" />
 
-![Function generator](https://drive.google.com/file/d/1DcgIB4-4X2fY28Wv1PRRag3uFoaa_9tN/view)
+[Function generator](https://drive.google.com/file/d/1DcgIB4-4X2fY28Wv1PRRag3uFoaa_9tN/view)
 
 Now, when we turn on the breadboard, we will see that our LED blinks on and off. Now try to see what the AMP and the FREQ sliders do to our LED. Hz on the switch board above the represents the frequency in which the current changes direction per second. This makes the LED blinks on and off. Hence, 1 Hz means the frequency of direction changes per second is 1Hz (meaning 1 cycle per second). 10 Hz means the frequency of the direction changes per second is 10 Hz. Therefore, when we change FREQ slider, moving it closer to 0.1, the LED blinks slower. 
 
